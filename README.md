@@ -10,6 +10,7 @@ Ejecuta el comando npm run dev para iniciar el proyecto
 
 Mi proyecto lo desarrolle en Express y estoy ejecutando seeders para rellenar la base de datos de usuarios. Tengo lógica y cifrado de contraseñas. Los comandos para ejecutar los seeders son npm run seed:import (crea usuarios) y npm run seed:destroy (elimina usuarios).
 Dentro del proyecto encontrarás la colección postman para ejecutar los servicios localmente.
+En este proyecto, implementé una arquitectura 100% MVC (Modelo-Vista-Controlador) como el enfoque principal. Este enfoque arquitectónico se seleccionó cuidadosamente para ofrecer una comprensión clara y mejorar la escalabilidad del código.
 
 # Database
 
