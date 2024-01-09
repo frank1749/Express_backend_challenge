@@ -1,0 +1,25 @@
+{
+  "name": "app_lucify",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Prueba técnica fullstack Licify - Frank Murillo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed:import": "node data/seed.js --import",
+    "seed:destroy": "node data/seed.js --destroy"
+  },
+  "author": "Frank Murillo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3"
+  }
+}

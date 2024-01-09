@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "9507e497-5175-49b6-8bd7-f9e9bb6e0d07",
+		"name": "Licify Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Backend express",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Frank\",\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"useremail2@test.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Data Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombreProyecto\": \"Test Noche\",\r\n    \"fechaInicial\": \"2019-04-10\",\r\n    \"fechaFinal\": \"2019-04-15\",\r\n    \"items\": [\r\n        {\r\n            \"item\": \"Ítem 1\",\r\n            \"valorUnitarioActual\": 200,\r\n            \"valorUnitarioPropuesto\": 200\r\n        },\r\n        {\r\n            \"item\": \"Ítem 2\",\r\n            \"valorUnitarioActual\": 300\r\n        },\r\n        {\r\n            \"item\": \"Ítem 3\",\r\n            \"valorUnitarioActual\": 450000\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/services/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Data Project",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idProyecto\": \"659cdc20e847eb9e403c3013\",\r\n    \"dataItems\": [\r\n        {\r\n            \"item\": \"Ítem 1\",\r\n            \"valorUnitarioActual\": 200,\r\n            \"nuevoValorPropuesto\": 150\r\n        },\r\n        {\r\n            \"item\": \"Ítem 1\",\r\n            \"valorUnitarioActual\": 300,\r\n            \"nuevoValorPropuesto\": 280\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/services/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/services/projects",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/services/projects/659a1102fbe67311a8a793f3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"projects",
+								"659a1102fbe67311a8a793f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Data Aplication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idUsuario\": \"659a431805a7ac98f3313da8\",\r\n    \"nombreUsuario\": \"TEst FIn\",\r\n    \"emailUsuario\": \"gama@gmail.com\",\r\n    \"tipoUsuario\": \"cons\",\r\n    \"idProyecto\": \"659cbcb05f784657e386b64a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/services/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Data Aplication",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/services/applications",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"services",
+								"applications"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
